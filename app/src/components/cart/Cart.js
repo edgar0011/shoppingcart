@@ -10,7 +10,7 @@ import BasicInput from '../ui/BasicInput';
 
 import * as addTodoActions from '../../actions/todoActions';
 
-import {TODOS} from '../../styles/basic';
+import { TODOS } from '../../styles/basic';
 
 
 @connect((store) => {

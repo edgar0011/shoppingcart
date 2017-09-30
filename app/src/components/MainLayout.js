@@ -18,7 +18,7 @@ export default function MainLayout(props:any) {
               <Col>
                 <ul class=" nav justify-content-center">
                   <li>
-                    <Link to="/" activeClassName="active" class="nav-item nav-link">Main</Link>
+                    <Link to="main" activeClassName="active" class="nav-item nav-link">Main</Link>
                   </li>
                   <li>
                     <Link to="cart" activeClassName="active" class="nav-item nav-link">Cart</Link>
