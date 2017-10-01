@@ -14,7 +14,7 @@ import './styles/bootstrap-override.scss';
 import './styles/main.scss';
 
 import MainLayout from './components/MainLayout';
-import Todo from './components/todo/Todo';
+import Cart from './components/cart/Cart';
 import Main from './components/main/Main';
 import store from './stores/store';
 
@@ -26,7 +26,7 @@ ReactDOM.render(
       <Redirect from="/" to="main" />
       <Route path="/" component={MainLayout}>
         <Route path="main" component={Main} />
-        <Route path="cart" component={Todo} />
+        <Route path="cart" component={Cart} />
       </Route>
     </Router>
   </Provider>

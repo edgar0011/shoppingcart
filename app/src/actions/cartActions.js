@@ -1,18 +1,42 @@
-/**
- * Created by edgar on 11/01/2017.
- */
-import { ADD_TODO, REMOVE_TODO } from '../config/CONSTANTS';
 
-export function addTodo(text, data) {
-  return {
-    type: ADD_TODO,
-    payload: { text, ...data },
+import * as CART from '../config/CONSTANTS';
+
+export function addItem(item) {
+  return (dispatch) => {
+    dispatch({
+      type: CART.ADD_ITEM,
+      payload: item,
+    });
+    dispatch({
+      type: CART.CALCULATE_ITEMS,
+      payload: null,
+    });
   };
 }
 
-export function removeTodo(id) {
+export function removeItem(id) {
+  return (dispatch) => {
+    dispatch({
+      type: CART.REMOVE_ITEM,
+      payload: id,
+    });
+    dispatch({
+      type: CART.CALCULATE_ITEMS,
+      payload: null,
+    });
+  };
+}
+
+export function editItem(item) {
   return {
-    type: REMOVE_TODO,
-    payload: id,
+    type: CART.EDIT_ITEM,
+    payload: item,
+  };
+}
+
+export function calculateItems() {
+  return {
+    type: CART.CALCULATE_ITEMS,
+    payload: null,
   };
 }
