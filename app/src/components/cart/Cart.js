@@ -5,7 +5,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { Row, Col, Button } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 
 import ShopItem from '../common/ShopItem';
 import CartSummary from '../common/CartSummary';
@@ -64,7 +64,7 @@ export default class Cart extends React.Component {
         </Row>
         <Row>
           <Col>
-            <Button onClick={this.handleCalculateClick}>Calculate</Button>
+            {/* <Button onClick={this.handleCalculateClick}>Calculate</Button> */}
           </Col>
         </Row>
       </div>

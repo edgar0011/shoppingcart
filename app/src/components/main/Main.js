@@ -76,9 +76,9 @@ export default class Main extends Component {
             <Col class="col-sm-4">
               <Row>
                 <Col class="col-sm-6">
-                  <div>
+                  {/* <div>
                     <Button onClick={this.handleCalculateClick}>Calculate</Button>
-                  </div>
+                  </div> */}
                 </Col>
                 <Col class="col-sm-6">
                   <CartSummary cartItems={cartItems} cartTotal={cartTotal} />

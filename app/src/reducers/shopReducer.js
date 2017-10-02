@@ -17,7 +17,7 @@ while (numProducts--) {
     productAdjective: faker.commerce.productAdjective(),
     productMaterial: faker.commerce.productMaterial(),
     image: faker.image.image(),
-    imageUrl: `http://via.placeholder.com/140x80?text=${name}`,
+    imageUrl: `http://via.placeholder.com/140x95?text=${name}`,
   });
 }
 

@@ -10,7 +10,7 @@ export default function CartSummary(props) {
       <br />
       {`Shop Items Count ${cartItemsNums}`}
       <br />
-      {`Cart Total ${cartTotal}`}<span class="fa fa-eur" />
+      {`Cart Total ${cartTotal}`}<span class="fa fa-eur" style={{ margin: '5px', fontSize: '12px' }} />
     </div>
   );
 }
