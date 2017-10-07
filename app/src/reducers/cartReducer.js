@@ -1,5 +1,5 @@
 import shortid from 'shortid';
-import * as CART from '../config/CONSTANTS';
+import * as CONSTANTS from '../config/CONSTANTS';
 
 const initialState = {
   items: [],
@@ -10,7 +10,7 @@ const initialState = {
 export default function todoReducer(state = initialState, action) {
   const type = action.type;
 
-  if (type === CART.ADD_ITEM) {
+  if (type === CONSTANTS.ADD_CART_ITEM) {
     const shopItem = action.payload;
 
     if (!state.shopItemIds[shopItem.id]) {
@@ -35,7 +35,7 @@ export default function todoReducer(state = initialState, action) {
       }),
     };
   }
-  if (type === CART.REMOVE_ITEM) {
+  if (type === CONSTANTS.REMOVE_CART_ITEM) {
     const cartItem = action.payload;
     const { shopItem } = cartItem;
     return {
@@ -45,7 +45,7 @@ export default function todoReducer(state = initialState, action) {
     };
   }
 
-  if (type === CART.EDIT_ITEM) {
+  if (type === CONSTANTS.EDIT_CART_ITEM) {
     return {
       ...state,
       items: state.items.map((item) => {
@@ -57,7 +57,7 @@ export default function todoReducer(state = initialState, action) {
     };
   }
 
-  if (type === CART.CALCULATE_ITEMS) {
+  if (type === CONSTANTS.CALCULATE_CART_ITEMS) {
     return {
       ...state,
       total:

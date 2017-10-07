@@ -28,5 +28,17 @@ export default class ServiceBase {
   post(url, data, config = null) {
     return axios.post(url, data, config);
   }
+
+  put(url, data, config = null) {
+    return axios.put(url, data, config);
+  }
+
+  patch(url, data, config = null) {
+    return axios.patch(url, data, config);
+  }
+
+  delete(url, data, config = null) {
+    return axios.delete(url, config);
+  }
 }
 

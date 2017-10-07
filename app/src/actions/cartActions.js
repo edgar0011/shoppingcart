@@ -1,14 +1,14 @@
 
-import * as CART from '../config/CONSTANTS';
+import * as CONSTANTS from '../config/CONSTANTS';
 
 export function addItem(item) {
   return (dispatch) => {
     dispatch({
-      type: CART.ADD_ITEM,
+      type: CONSTANTS.ADD_CART_ITEM,
       payload: item,
     });
     dispatch({
-      type: CART.CALCULATE_ITEMS,
+      type: CONSTANTS.CALCULATE_CART_ITEMS,
       payload: null,
     });
   };
@@ -17,11 +17,11 @@ export function addItem(item) {
 export function removeItem(id) {
   return (dispatch) => {
     dispatch({
-      type: CART.REMOVE_ITEM,
+      type: CONSTANTS.REMOVE_CART_ITEM,
       payload: id,
     });
     dispatch({
-      type: CART.CALCULATE_ITEMS,
+      type: CONSTANTS.CALCULATE_CART_ITEMS,
       payload: null,
     });
   };
@@ -29,14 +29,14 @@ export function removeItem(id) {
 
 export function editItem(item) {
   return {
-    type: CART.EDIT_ITEM,
+    type: CONSTANTS.EDIT_CART_ITEM,
     payload: item,
   };
 }
 
 export function calculateItems() {
   return {
-    type: CART.CALCULATE_ITEMS,
+    type: CONSTANTS.CALCULATE_CART_ITEMS,
     payload: null,
   };
 }

@@ -17,6 +17,9 @@ import MainLayout from './components/MainLayout';
 import Cart from './components/cart/Cart';
 import Main from './components/main/Main';
 import store from './stores/store';
+import * as shopActions from './actions/shopActions';
+
+store.dispatch(shopActions.loadItems());
 
 /* global document */
 const app = document.getElementById('app');
