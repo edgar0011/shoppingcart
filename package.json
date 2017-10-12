@@ -9,7 +9,8 @@
     "build": "webpack",
     "dev": "webpack-dev-server --content-base src --inline --w",
     "dev2": "webpack-dev-server --content-base src --inline --hot",
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start0": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start": "NODE_ENV=production babel-node server.js --presets es2015,stage-2",
     "lint": "eslint ./app --cache --ignore-pattern .gitignore",
     "precommit": "npm run lint"
   },
@@ -35,6 +36,7 @@
   },
   "dependencies": {
     "axios": "0.15.3",
+    "babel-cli": "^6.26.0",
     "babel-core": "6.22.1",
     "babel-eslint": "7.2.3",
     "babel-loader": "6.2.10",
@@ -55,7 +57,7 @@
     "clean-webpack-plugin": "0.1.15",
     "copy-webpack-plugin": "3.0.1",
     "css-loader": "0.26.1",
-    "extract-text-webpack-plugin": "1.0.1",
+    "extract-text-webpack-plugin": "2.1.2",
     "faker": "4.1.0",
     "file-loader": "0.10.0",
     "firebase": "^4.4.0",
