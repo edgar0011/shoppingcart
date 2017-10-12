@@ -1,5 +1,5 @@
 // @flow
-
+/*
 import firebase from 'firebase';
 import ShopService  from './ShopService';
 import type ShopServiceType  from './ShopService';
@@ -19,8 +19,9 @@ const defaultDatabase = defaultApp.database();
 
 const rootRef = defaultDatabase.ref();
 
-export default rootRef;
-const service: ShopServiceType = new ShopService();
+export default rootRef; */
+
+// const service: ShopServiceType = new ShopService();
 // axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 // axios.defaults.headers.common['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS';
 

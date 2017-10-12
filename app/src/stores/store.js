@@ -8,11 +8,10 @@ import thunk from 'redux-thunk';
 import shopReducer from '../reducers/shopReducer';
 import cartReducer from '../reducers/cartReducer';
 
-
 const rootReducer = combineReducers({ shop: shopReducer, cart: cartReducer });
 
-let window;
 const composeEnhancers =
+  /* global window */
   typeof window === 'object' &&
   /* eslint no-underscore-dangle: 0 */
   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?

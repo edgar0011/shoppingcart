@@ -1,12 +1,12 @@
-import faker from 'faker';
-import shortid from 'shortid';
+// import faker from 'faker';
+// import shortid from 'shortid';
 import * as CONSTANTS from '../config/CONSTANTS';
-import ShopService from '../dataApi/ShopService';
+// import ShopService from '../dataApi/ShopService';
 
 const initialState = {
   items: [],
 };
-
+/*
 const loadDataToFB = () => {
   const service = new ShopService();
   let numProducts = 20;
@@ -25,17 +25,15 @@ const loadDataToFB = () => {
     });
     service.addShopItem(initialState.items[initialState.items.length - 1]);
   }
-};
+}; */
 
 export default function shopReducer(state = initialState, action) {
-
   if (action.type === CONSTANTS.LOADED_ITEMS) {
-    const items = Object.keys(action.payload).map(key => {
+    const items = Object.keys(action.payload).map((key) => {
       const item = action.payload[key];
       item.key = key;
       return item;
     });
-    debugger;
     return {
       ...state,
       items,
