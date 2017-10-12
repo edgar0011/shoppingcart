@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function CartSummary(props) {
   const { cartItems, cartTotal } = props;
-  const cartItemsNums = cartItems.reduce((total, cartItem) => cartItem.num, 0);
+  const cartItemsNums = cartItems.reduce((total, cartItem) => total + cartItem.num, 0);
   return (
     <div>
       {`Shop Items ${cartItems.length}`}
