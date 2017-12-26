@@ -9,9 +9,9 @@ export default function ShoppingItem(props) {
   const { onClick, onActionClick, mode } = props;
   const text = `${productName}, ${productMaterial}, ${productAdjective}, ${color}`;
   return (
-    <div role="menuItem">
-      <Card>
-        <CardImg class="card-img-left" src={imageUrl} alt={name} onClick={onClick} />
+    <div role="menuItem" style={{ margin: '5px' }} >
+      <Card style={{ padding: '5px' }} >
+        <CardImg class="card-img-top" src={imageUrl} alt={name} onClick={onClick} />
         <CardBlock>
           <CardTitle>{price}<span style={{ margin: '5px', fontSize: '12px' }} class="fa fa-eur" /></CardTitle>
           <CardSubtitle>{name}</CardSubtitle>

@@ -37,24 +37,24 @@ export default class Cart extends React.Component {
     const { cartItems, cartTotal } = this.props;
 
     const itemsElements = cartItems && cartItems.map(item => (
-      <li class="list-group-item" key={`item${item.id}`}>
+      <div key={`item${item.id}`} style={{ display: 'inline-block' }} >
         <ShopItem
           item={item.shopItem}
           onActionClick={() => this.handleRemoveItem(item)}
           mode="cart"
         />
         count: {item.num}
-      </li>
+      </div>
     ));
 
     return (
       <div>
         <h3>{title}</h3>
         <Row>
-          <Col>
-            <ul>
+          <Col class="col-sm-8">
+            <div>
               {itemsElements}
-            </ul>
+            </div>
           </Col>
         </Row>
         <Row>

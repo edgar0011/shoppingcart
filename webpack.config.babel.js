@@ -106,7 +106,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      minify: false,
+      favicon: '../app/assets/images/favicon-32x32.png',
 
     }),
     new webpack.NamedModulesPlugin(),
@@ -117,7 +117,6 @@ module.exports = {
       filename: 'shopping-cart.bundle.css',
     }),
   ].concat(debug ? [] : [
-
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),

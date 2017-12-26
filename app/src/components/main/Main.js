@@ -46,7 +46,7 @@ export default class Main extends Component {
     const title = 'Shopping';
     const { shopItems, cartTotal, cartItems } = this.props;
     const items = shopItems.map(item => (
-      <div key={`item${item.id}`} style={{ width: '50%', display: 'inline-block' }} >
+      <div key={`item${item.id}`} style={{ display: 'inline-block' }} >
         <ShopItem
           item={item}
           onClick={() => this.handleItemClick(item)}
